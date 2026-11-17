@@ -1,0 +1,35 @@
+name: Documentación
+description: Crear, corregir o actualizar documentación del proyecto.
+title: "[DOCS] "
+labels:
+  - "type: documentation"
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo
+      description: ¿Qué documento o información debe trabajarse?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Contenido y alcance
+      description: Indica qué debe incluirse o corregirse.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      placeholder: |
+        - [ ] Información revisada
+        - [ ] Fuentes o referencias incluidas
+        - [ ] Enlaces internos comprobados
+    validations:
+      required: true
+  - type: input
+    id: destination
+    attributes:
+      label: Ruta del documento
+      placeholder: "docs/..."

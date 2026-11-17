@@ -1,0 +1,55 @@
+name: Tarea
+description: Registrar una tarea concreta y asignable.
+title: "[TASK] "
+labels:
+  - "type: task"
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo de la tarea
+      description: Describe el resultado concreto que debe producirse.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Actividades
+      description: Desglosa los pasos necesarios.
+      placeholder: |
+        - [ ] Paso 1
+        - [ ] Paso 2
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Condiciones verificables para cerrar la tarea.
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      options:
+        - P0 - Imprescindible
+        - P1 - Importante
+        - P2 - Ampliación
+    validations:
+      required: true
+  - type: input
+    id: phase
+    attributes:
+      label: Fase
+      placeholder: "Ej. Fase 1 - Organización"
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimación de esfuerzo
+      placeholder: "Ej. 2 h de equipo"
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias
+      description: Indica otras Issues o decisiones necesarias.

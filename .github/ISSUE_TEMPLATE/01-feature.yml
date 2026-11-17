@@ -1,0 +1,56 @@
+name: Nueva funcionalidad
+description: Proponer una funcionalidad nueva para el museo.
+title: "[FEATURE] "
+labels:
+  - "type: feature"
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Descripción
+      description: ¿Qué se quiere implementar y para qué?
+      placeholder: Describe la funcionalidad.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto y necesidad
+      description: ¿Qué problema o necesidad resuelve?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: ¿Cómo sabremos que está terminada?
+      placeholder: |
+        - [ ] Criterio verificable 1
+        - [ ] Criterio verificable 2
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      options:
+        - P0 - Imprescindible
+        - P1 - Importante
+        - P2 - Ampliación
+    validations:
+      required: true
+  - type: input
+    id: phase
+    attributes:
+      label: Fase
+      placeholder: "Ej. Fase 3 - Prototipo técnico"
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone previsto
+      placeholder: "Ej. M01 - Preparación y prototipo técnico"
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias y notas
+      description: Indica Issues previas, recursos o decisiones necesarias.
